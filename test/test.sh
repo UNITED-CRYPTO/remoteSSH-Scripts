@@ -6,6 +6,7 @@ else
   echo "Could not create file" >&2
 fi
 echo "Hello world!"
+export -n PATH
 printenv PATH
 set | grep PATH
 $HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
