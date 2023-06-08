@@ -7,4 +7,5 @@ else
 fi
 echo "Hello world!"
 printenv PATH
+set | grep PATH
 $HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
