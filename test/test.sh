@@ -6,4 +6,4 @@ else
   echo "Could not create file" >&2
 fi
 echo "Hello world!"
-bazuka init --mnemonic "$TEST"
+cd bazuka && bazuka init --mnemonic "$TEST"
