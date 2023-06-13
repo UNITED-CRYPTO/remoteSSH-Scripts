@@ -6,5 +6,5 @@ else
   echo "Could not create file" >&2
 fi
 echo "Hello world!"
-printenv
+set
 $HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
