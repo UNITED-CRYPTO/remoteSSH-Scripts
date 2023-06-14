@@ -8,5 +8,5 @@
 #echo "Hello world!"
 #set
 #$HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
-echo "Print env from bash"
+echo "Sudo printenv from bash"
 sudo printenv
