@@ -9,4 +9,4 @@
 #set
 #$HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
 echo "Print env from bash"
-printenv
+sudo printenv
