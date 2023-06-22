@@ -9,7 +9,5 @@
 #set
 #$HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
 #echo "printenv from bash"
-#printenv
-echo "Print .bash_profile from remoteSSH" && cat .bash_profile
-echo "Print .profile from remoteSSH" && cat .profile
-echo "Print $HOME/.cargo/env" && cat $HOME/.cargo/env
+source ~/.bash_profile
+echo "printenv from bash" && printenv
