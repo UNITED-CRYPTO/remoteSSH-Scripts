@@ -10,5 +10,5 @@
 #$HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
 #echo "printenv from bash"
 #source ~/.bash_profile
-echo "printenv from bash" && printenv
+echo "printenv from bash" && printenv TEST
 bazuka node status | grep -e "version" -e "height" -e "network"
