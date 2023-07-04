@@ -10,7 +10,7 @@
 #$HOME/.cargo/bin/bazuka init --mnemonic "$TEST"
 #echo "printenv from bash"
 #source ~/.bash_profile
-echo "
+echo -n "
    _____                     _                ____   ____   _   _ 
   |  _  \  __   _  _   __   | |   __    __   /   _\ /   _\ | |_| |
   | | ) / / _\ | \/ | / _\ |   | / _\  |__|  \__  \ \__  \ |  _  |
