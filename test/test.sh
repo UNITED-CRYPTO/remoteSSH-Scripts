@@ -11,4 +11,4 @@
 #echo "printenv from bash"
 source ~/.bash_profile
 echo "printenv from bash" && printenv
-bazuka node status | grep -e "version" -e "height" -e "network"',
+bazuka node status | grep -e "version" -e "height" -e "network"
