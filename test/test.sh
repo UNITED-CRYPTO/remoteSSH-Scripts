@@ -15,5 +15,5 @@ echo -e "
 |  _  \  __   _  _   __   | |   __    __   /   _\ /   _\ | |_| |
 | | ) / / _\ | \/ | / _\ |   | / _\  |__|  \__  \ \__  \ |  _  |
 |_| \_\ \__\ |_||_| \__/  |_|  \__\        \____/ \____/ |_| |_|"
-echo "printenv from bash" && printenv PATH TEST TEST2
+echo "printenv from bash" && printenv
 bazuka node status | grep -e "version" -e "height" -e "network"
