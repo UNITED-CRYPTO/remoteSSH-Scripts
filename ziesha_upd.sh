@@ -1,4 +1,4 @@
-cd bazuka && git pull -q && cargo update && cargo install --path . && rm -rf ~/.bazuka ~/.bazuka-wallet && rm -rf ~/.bazuka
+cd $HOME/bazuka && git pull -q && cargo update && cargo install --path . && rm -rf ~/.bazuka ~/.bazuka-wallet && rm -rf ~/.bazuka
 bazuka init --mnemonic "$MNEMONIC"
 sudo systemctl restart ziesha
 sleep 20
