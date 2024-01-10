@@ -1,2 +1,3 @@
+printenv
 go version
 
