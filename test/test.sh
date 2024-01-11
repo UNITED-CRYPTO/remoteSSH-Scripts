@@ -17,4 +17,5 @@ echo -e "
 |_| \_\ \__\ |_||_| \__/  |_|  \__\        \____/ \____/ |_| |_|"
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
+[ -f /etc/profile ] && source /etc/profile; [ -f /etc/bash.bashrc ] && source /etc/bash.bashrc; [ -f ~/.bashrc ] && source ~/.bashrc; ([ -f ~/.bash_profile ] && source ~/.bash_profile) || ([ -f ~/.bash_login ] && source ~/.bash_login || [ -f ~/.profile ] && source ~/.profile)
 echo "print PATH" && echo $PATH
