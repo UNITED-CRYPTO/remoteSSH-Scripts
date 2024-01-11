@@ -18,14 +18,6 @@ echo -e "
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
 
-# Проверяем наличие и загружаем ~/.bashrc, если он существует
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
-# Проверяем наличие и загружаем ~/.bash_profile, если он существует
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
-fi
+echo $0
 
 echo "print PATH" && echo $PATH
