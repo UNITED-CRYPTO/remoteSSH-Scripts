@@ -18,5 +18,3 @@ echo -e "
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
 echo "print PATH" && echo $PATH
-echo "apply source .bashrc" && source ~/.bashrc 2>&1 | grep -i error
-echo "print PATH" && echo $PATH
