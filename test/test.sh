@@ -18,11 +18,14 @@ echo -e "
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
 
-echo "print BASH" && echo $BASH
+# Проверяем наличие и загружаем ~/.bashrc, если он существует
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
 
-[ -f /etc/profile ] && { echo "sourcing /etc/profile"; source /etc/profile; }
-[ -f /etc/bash.bashrc ] && { echo "sourcing /etc/bash.bashrc"; source /etc/bash.bashrc; }
-[ -f ~/.bashrc ] && { echo "sourcing ~/.bashrc"; source ~/.bashrc; }
-([ -f ~/.bash_profile ] && { echo "sourcing ~/.bash_profile"; source ~/.bash_profile; }) || ([ -f ~/.bash_login ] && { echo "sourcing ~/.bash_login"; source ~/.bash_login; }) || ([ -f ~/.profile ] && { echo "sourcing ~/.profile"; source ~/.profile; })
+# Проверяем наличие и загружаем ~/.bash_profile, если он существует
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
 
 echo "print PATH" && echo $PATH
