@@ -18,6 +18,8 @@ echo -e "
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
 
+echo "print BASH" && echo $BASH
+
 [ -f /etc/profile ] && { echo "sourcing /etc/profile"; source /etc/profile; }
 [ -f /etc/bash.bashrc ] && { echo "sourcing /etc/bash.bashrc"; source /etc/bash.bashrc; }
 [ -f ~/.bashrc ] && { echo "sourcing ~/.bashrc"; source ~/.bashrc; }
