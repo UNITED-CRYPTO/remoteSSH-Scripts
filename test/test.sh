@@ -18,6 +18,8 @@ echo -e "
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
 
+# GO Install script. Please specify the newest version of GO (see https://go.dev/dl/)
+
 echo "print PATH" && echo $PATH
 
 echo "set ver" && ver="1.21.6"
