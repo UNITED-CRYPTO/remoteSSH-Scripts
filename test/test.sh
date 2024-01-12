@@ -29,4 +29,7 @@ echo "del arch" && rm "go$ver.linux-amd64.tar.gz"
 echo "export PATH to .profile" && echo "export PATH=\$PATH:/usr/local/go/bin" >>~/.profile
 echo "export work PATH to .profile" && echo "export PATH=\$PATH:\$(go env GOPATH)/bin" >>~/.profile
 source ~/.profile
+
+echo "print PATH" && echo $PATH
+
 go version
