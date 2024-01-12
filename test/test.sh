@@ -18,6 +18,4 @@ echo -e "
 #echo "printenv from bash" && printenv
 #bazuka node status | grep -e "version" -e "height" -e "network"
 
-echo $0
-
 echo "print PATH" && echo $PATH
