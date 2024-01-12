@@ -19,3 +19,14 @@ echo -e "
 #bazuka node status | grep -e "version" -e "height" -e "network"
 
 echo "print PATH" && echo $PATH
+
+ver="1.21.6"
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm "go$ver.linux-amd64.tar.gz"
+#echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
+echo "export PATH=\$PATH:/usr/local/go/bin" >>~/.profile
+echo "export PATH=\$PATH:\$(go env GOPATH)/bin" >>~/.profile
+source ~/.profile
+go version
