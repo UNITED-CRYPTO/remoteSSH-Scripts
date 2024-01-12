@@ -21,3 +21,4 @@ echo -e "
 # GO Install script. Please specify the newest version of GO (see https://go.dev/dl/)
 
 echo "print PATH" && echo $PATH
+echo "print go version" && go version
