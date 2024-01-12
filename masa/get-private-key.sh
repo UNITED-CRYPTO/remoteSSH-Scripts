@@ -1,2 +1,2 @@
 # Просмотр приватника (private key) кошелька ноды. Далее предстоит добавить в метамаск новый адрес кошелька ноды по этому приватнику.
-cat /root/.masa/masa_oracle_key.ecdsa
+echo "PK=" && cat /root/.masa/masa_oracle_key.ecdsa
