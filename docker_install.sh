@@ -13,7 +13,7 @@ echo \
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-sudo docker run hello-world
 sudo systemctl enable docker
+sudo docker run hello-world
 docker -v
 docker ps -a
