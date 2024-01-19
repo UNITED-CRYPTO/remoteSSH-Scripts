@@ -17,10 +17,9 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 EOF
 
+#Запуск
 sudo systemctl daemon-reload
-
 sudo systemctl enable masad
-
 sudo systemctl start masad
 
 #Логи
