@@ -1,5 +1,5 @@
-#sudo tee /etc/systemd/system/masad.service > /dev/null <<EOF
-sudo tee /root/masad.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/masad.service > /dev/null <<EOF
+#sudo tee /root/masad.service > /dev/null <<EOF
 
 [Unit]
 Description=Masa Node
