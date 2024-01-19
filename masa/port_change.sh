@@ -6,3 +6,5 @@ sudo tee /root/.masa/masa_oracle_node.env > /dev/null <<EOF
 private.key=/root/.masa/masa_oracle_key
 PORT=8081
 EOF
+
+cat /root/.masa/masa_oracle_node.env
