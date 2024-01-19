@@ -22,3 +22,6 @@ EOF
 #sudo systemctl enable masad
 
 #sudo systemctl start masad
+
+#Логи
+#sudo journalctl -u masad -f --no-hostname -o cat
