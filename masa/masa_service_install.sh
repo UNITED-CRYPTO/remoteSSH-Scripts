@@ -26,4 +26,4 @@ sudo systemctl start masad
 sudo timeout 20s journalctl -u masad -f --no-hostname -o cat || true
 
 #Статус сервиса
-sudo systemctl status masad
+sudo systemctl list-units --type service | grep masa
