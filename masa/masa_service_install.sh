@@ -1,3 +1,4 @@
+#Создание конфига сервиса
 sudo tee /etc/systemd/system/masad.service > /dev/null <<EOF
 
 [Unit]
@@ -25,4 +26,5 @@ sudo systemctl start masad
 #Логи
 sudo timeout 20s journalctl -u masad -f --no-hostname -o cat || true
 
+#Статус сервиса
 sudo systemctl status masad
