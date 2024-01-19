@@ -24,3 +24,5 @@ sudo systemctl start masad
 
 #Логи
 sudo timeout 20s journalctl -u masad -f --no-hostname -o cat || true
+
+sudo systemctl status masad
