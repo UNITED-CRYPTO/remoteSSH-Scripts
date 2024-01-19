@@ -1,5 +1,4 @@
 sudo tee /etc/systemd/system/masad.service > /dev/null <<EOF
-#sudo tee /root/masad.service > /dev/null <<EOF
 
 [Unit]
 Description=Masa Node
@@ -17,11 +16,11 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 EOF
 
-#sudo systemctl daemon-reload
+sudo systemctl daemon-reload
 
-#sudo systemctl enable masad
+sudo systemctl enable masad
 
-#sudo systemctl start masad
+sudo systemctl start masad
 
 #Логи
-#sudo journalctl -u masad -f --no-hostname -o cat
+sudo timeout 20s journalctl -u masad -f --no-hostname -o cat || true
