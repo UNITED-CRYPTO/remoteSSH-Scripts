@@ -1,4 +1,4 @@
-echo '############################### DEFAULT #####################################
+echo "############################### DEFAULT #####################################
 # Chain ID
 CHAIN_ID=167008
 
@@ -25,7 +25,7 @@ DISABLE_P2P_SYNC=false
 
 ############################### REQUIRED #####################################
 # L1 Holesky RPC endpoints (you will need an RPC provider such as BlockPi, or run a full Holesky node yourself)
-# If you are using a local Holesky L1 node, you can refer to it as "http://host.docker.internal:8545" and "ws://host.docker.internal:8546", which refer to the default ports in the .env for an eth-docker L1 node.
+# If you are using a local Holesky L1 node, you can refer to it as http://host.docker.internal:8545 and ws://host.docker.internal:8546, which refer to the default ports in the .env for an eth-docker L1 node.
 # However, you may need to add this host to docker-compose.yml. If that does not work, you can try the private local ip address (e.g. http://192.168.1.15:8545). You can find that with `ip addr show` or a similar command.
 L1_ENDPOINT_HTTP=$L1_ENDPOINT_HTTP
 L1_ENDPOINT_WS=$L1_ENDPOINT_WS
@@ -49,7 +49,7 @@ MIN_ACCEPTABLE_PROOF_FEE=1
 TOKEN_ALLOWANCE=
 
 # If you want to be a proposer who proposes L2 execution engine's transactions in mempool to Taiko L1 protocol
-# contract (be a "mining L2 node"), you need to change `ENABLE_PROPOSER` to true, then fill `L1_PROPOSER_PRIVATE_KEY`
+# contract (be a mining L2 node), you need to change ENABLE_PROPOSER to true, then fill L1_PROPOSER_PRIVATE_KEY
 ENABLE_PROPOSER=true
 # A L1 account (with balance) private key who will send TaikoL1.proposeBlock transactions
 L1_PROPOSER_PRIVATE_KEY=$L1_PROPOSER_PRIVATE_KEY
@@ -71,6 +71,6 @@ TXPOOL_LOCALS=
 
 # Timeout when waiting for a propose or prove block transaction receipt to be seen, in seconds
 WAIT_RECEIPT_TIMEOUT=360
-' > $HOME/simple-taiko-node/.env
+" > $HOME/simple-taiko-node/.env
 
 cat $HOME/simple-taiko-node/.env
