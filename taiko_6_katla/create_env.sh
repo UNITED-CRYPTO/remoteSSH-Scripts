@@ -73,4 +73,4 @@ TXPOOL_LOCALS=
 # Timeout when waiting for a propose or prove block transaction receipt to be seen, in seconds
 WAIT_RECEIPT_TIMEOUT=360
 EOF
-cat $HOME/simple-taiko-node/.env
+#cat $HOME/simple-taiko-node/.env
