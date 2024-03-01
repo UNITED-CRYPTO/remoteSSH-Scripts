@@ -49,7 +49,7 @@ MIN_ACCEPTABLE_PROOF_FEE=1
 # Amount to approve AssignmentHook + TaikoL1 contracts for TaikoToken usage (in wei)
 TOKEN_ALLOWANCE=
 
-# If you want to be a proposer who proposes L2 execution engine's transactions in mempool to Taiko L1 protocol
+# If you want to be a proposer who proposes L2 execution engines transactions in mempool to Taiko L1 protocol
 # contract (be a mining L2 node), you need to change ENABLE_PROPOSER to true, then fill L1_PROPOSER_PRIVATE_KEY
 ENABLE_PROPOSER=true
 # A L1 account (with balance) private key who will send TaikoL1.proposeBlock transactions
@@ -67,7 +67,7 @@ PROVER_ENDPOINTS=http://taiko_client_prover_relayer:9876
 # without the original prover submitting a proof.)
 PROVE_UNASSIGNED_BLOCKS=false
 
-# Comma-delimited local tx pool addresses you want to prioritize, useful to set your proposer to only propose blocks with your prover's transactions
+# Comma-delimited local tx pool addresses you want to prioritize, useful to set your proposer to only propose blocks with your provers transactions
 TXPOOL_LOCALS=
 
 # Timeout when waiting for a propose or prove block transaction receipt to be seen, in seconds
