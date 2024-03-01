@@ -1,4 +1,4 @@
-echo "############################### DEFAULT #####################################
+echo '############################### DEFAULT #####################################
 # Chain ID
 CHAIN_ID=167008
 
@@ -71,6 +71,6 @@ TXPOOL_LOCALS=
 
 # Timeout when waiting for a propose or prove block transaction receipt to be seen, in seconds
 WAIT_RECEIPT_TIMEOUT=360
-" > $HOME/simple-taiko-node/.env
+' > $HOME/simple-taiko-node/.env
 
 cat $HOME/simple-taiko-node/.env
