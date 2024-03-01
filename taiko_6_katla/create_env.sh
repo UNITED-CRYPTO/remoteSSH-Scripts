@@ -74,4 +74,4 @@ TXPOOL_LOCALS=
 WAIT_RECEIPT_TIMEOUT=360
 EOF
 cd $HOME/simple-taiko-node/
-cat .env
+cat docker-compose.yml
