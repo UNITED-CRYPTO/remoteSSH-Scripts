@@ -33,7 +33,7 @@ L1_ENDPOINT_WS=$L1_ENDPOINT_WS
 
 ############################### OPTIONAL #####################################
 # If you want to be a prover who generates and submits zero knowledge proofs of proposed L2 blocks, you need to change
-# `ENABLE_PROVER` to true and set `L1_PROVER_PRIVATE_KEY`.
+# ENABLE_PROVER to true and set L1_PROVER_PRIVATE_KEY.
 ENABLE_PROVER=false
 # SGX Raiko service endpoint
 SGX_RAIKO_HOST=
@@ -71,7 +71,8 @@ PROVE_UNASSIGNED_BLOCKS=false
 TXPOOL_LOCALS=
 
 # Timeout when waiting for a propose or prove block transaction receipt to be seen, in seconds
-WAIT_RECEIPT_TIMEOUT=360"
+WAIT_RECEIPT_TIMEOUT=360
 EOF
 
 cat $HOME/simple-taiko-node/.env
+
