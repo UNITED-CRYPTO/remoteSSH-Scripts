@@ -8,10 +8,10 @@
 # PORT_PROMETHEUS=9091
 # PORT_GRAFANA=3001
 
-Проверить их доступность можно так:
-sudo ss -tulpn | grep LISTEN | grep -e 8547 -e 8548 -e 6060 -e 30306 -e 9876 -e 9091 -e 3001
+# Проверить их доступность можно так:
+# sudo ss -tulpn | grep LISTEN | grep -e 8547 -e 8548 -e 6060 -e 30306 -e 9876 -e 9091 -e 3001
 
-Или так:
+# Или так:
 if ! sudo ss -tulpn | grep LISTEN | grep -e 8547 -e 8548 -e 6060 -e 30306 -e 9876 -e 9091 -e 3001; then 
 	echo "All rorts are free" 
 else
