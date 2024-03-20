@@ -1,6 +1,7 @@
 #Удаление старых контейнеров
 
 if [ -d $HOME/simple-taiko-node ] ; then 
+	echo "There is $HOME/simple-taiko-node, removing..."
 	cd $HOME/simple-taiko-node
 	docker compose down -v
 	cd $HOME
