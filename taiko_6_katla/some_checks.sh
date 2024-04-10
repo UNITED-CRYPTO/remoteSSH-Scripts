@@ -1,7 +1,8 @@
 df -hT | grep sda3 | awk '{print $1 echo '-' $5 echo "G Available"}'
 echo "Dashboard address: http://$(hostname -I | awk '{print $1}'):3001"
 
-#Check if the Execution Layer client is synced by requesting the latest Taiko L2 / L3 block from the Execution Layer client:
+#Check if the Execution Layer client is synced by requesting the latest Taiko L2 / L3 block from the Execution Layer client
+echo "Check last block number"
 curl http://localhost:8547 \
   -X POST \
   -H "Content-Type: application/json" \
