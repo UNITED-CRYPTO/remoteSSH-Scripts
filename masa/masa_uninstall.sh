@@ -1,2 +1,2 @@
-docker -v
+ls -la
 
