@@ -1,11 +1,12 @@
 # Останов и удаление сервиса
-sudo systemctl stop masad
-sudo systemctl disable masad
-sudo systemctl daemon-reload
+#sudo systemctl stop masad
+#sudo systemctl disable masad
+#sudo systemctl daemon-reload
+sudo systemctl status masad
 
 # Удаление данных
-rm - rf masa-oracle-go-testnet
-sudo rm /etc/systemd/system/masad.service
+rm -rf masa-oracle-go-testnet
+#sudo rm /etc/systemd/system/masad.service
 
 # Проверка
 sudo cat /etc/systemd/system/masad.service
