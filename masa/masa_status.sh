@@ -13,3 +13,5 @@ if [ -d $HOME/masa-oracle-go-testnet ] ; then
 else
 	echo "There is no $HOME/masa-oracle-go-testnet"
 fi
+
+ls -la | grep masa
