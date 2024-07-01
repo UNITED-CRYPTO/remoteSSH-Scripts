@@ -1,5 +1,5 @@
 #Логи
-echo "masa last 20 sec. logs" && sudo timeout 20s journalctl -u masad -f --no-hostname -o cat || true
+#echo "masa last 20 sec. logs" && sudo timeout 20s journalctl -u masad -f --no-hostname -o cat || true
 
 #Статус сервиса
 echo "masa servise status" && sudo systemctl list-units --type service | grep masa
@@ -7,6 +7,6 @@ echo "masa servise status" && sudo systemctl list-units --type service | grep ma
 #Порты
 echo "masa used ports" && sudo ss -tulpn | grep masa
 
-#Работа из папки
+#Папки
 cd meson_cdn-linux-amd64/
 sudo ./service status meson_cdn
