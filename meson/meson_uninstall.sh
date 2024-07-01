@@ -1,2 +1,2 @@
-docker -v
+ls -ls | grep meson
 
