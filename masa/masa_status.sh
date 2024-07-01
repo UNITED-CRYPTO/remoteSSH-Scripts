@@ -6,3 +6,7 @@ echo "masa servise status" && sudo systemctl list-units --type service | grep ma
 
 #Порты
 echo "masa used ports" && sudo ss -tulpn | grep masa
+
+#Работа из папки
+cd meson_cdn-linux-amd64/
+sudo ./service status meson_cdn
