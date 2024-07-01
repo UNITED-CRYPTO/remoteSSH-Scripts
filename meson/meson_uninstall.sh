@@ -1,2 +1,2 @@
-ls -ls | grep meson
+ls -la | grep meson
 
