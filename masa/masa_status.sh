@@ -8,5 +8,4 @@ echo "masa servise status" && sudo systemctl list-units --type service | grep ma
 echo "masa used ports" && sudo ss -tulpn | grep masa
 
 #Папки
-cd meson_cdn-linux-amd64/
-sudo ./service status meson_cdn
+cd masa-oracle-go-testnet
