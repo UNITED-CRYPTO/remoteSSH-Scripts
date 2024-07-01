@@ -8,4 +8,8 @@ echo "masa servise status" && sudo systemctl list-units --type service | grep ma
 echo "masa used ports" && sudo ss -tulpn | grep masa
 
 #Папки
-cd masa-oracle-go-testnet
+if [ -d $HOME/masa-oracle-go-testnet ] ; then 
+	echo "There is $HOME/masa-oracle-go-testnet"
+else
+	echo "There is no $HOME/masa-oracle-go-testnet"
+fi
