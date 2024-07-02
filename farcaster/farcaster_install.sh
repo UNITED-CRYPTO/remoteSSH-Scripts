@@ -33,8 +33,8 @@ BOOTSTRAP_NODE=/dns/nemes.farcaster.xyz/tcp/2282
 EOF
 
 # Запуск контейнера с нодой
-# docker compose up hubble -d
+docker compose up hubble -d
 # Если видим Hubble requires at least 16GB of RAM to run. Detected 7GB, то сервер имеет недостаточно памяти
 
 # Журналы
-# echo "check last 20 sec. logs" && timeout 20s docker compose logs -f hubble || true
+echo "check last 20 sec. logs" && timeout 20s docker compose logs -f hubble || true
