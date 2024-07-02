@@ -12,9 +12,9 @@ sudo chmod -R 777 .hub .rocks
 docker compose run hubble yarn identity create
 
 # В норме должно выдать такое:
-#{"hostname":"1ef970141261","pid":28,"time":1719918738294,"level":30,"msg":"Flushing rust log buffer. Writing logs directly from Rust","flush_next":true}
-#{"level":30,"time":1719918738295,"pid":28,"hostname":"1ef970141261","msg":"Wrote peerId: [some ID] to #/home/node/app/apps/hubble/.hub/12D3KooWFcHMvktNEpdewsyMh2WdUJzNLij4y2qGW7FwNBMFHJaV_id.protobuf"}
-#{"level":30,"time":1719918738294,"pid":28,"hostname":"1ef970141261","msg":"Wrote peerId: [some ID] to /home/node/app/apps/hubble/.hub/default_id.protobuf"}
+#{"hostname":"[some_hostname]","pid":28,"time":1719918738294,"level":30,"msg":"Flushing rust log buffer. Writing logs directly from Rust","flush_next":true}
+#{"level":30,"time":1719918738295,"pid":28,"hostname":"[some_hostname]","msg":"Wrote peerId: [some ID] to #/home/node/app/apps/hubble/.hub/[some ID]_id.protobuf"}
+#{"level":30,"time":1719918738294,"pid":28,"hostname":"[some_hostname]","msg":"Wrote peerId: [some ID] to /home/node/app/apps/hubble/.hub/default_id.protobuf"}
 
 # Создание файла .env скриптом
 sudo tee .env > /dev/null <<EOF
