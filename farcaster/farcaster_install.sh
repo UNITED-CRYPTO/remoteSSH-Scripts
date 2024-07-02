@@ -19,13 +19,13 @@ docker compose run hubble yarn identity create
 # Создание файла .env скриптом
 sudo tee .env > /dev/null <<EOF
 # Set this to your L1 Mainnet ETH RPC URL
-ETH_MAINNET_RPC_URL=$ETH-RPC
+ETH_MAINNET_RPC_URL=$ETH_RPC
 
 # Set this to your L2 Optimism Mainnet RPC URL
-OPTIMISM_L2_RPC_URL=$OPTIMISM-RPC
+OPTIMISM_L2_RPC_URL=$OPTIMISM_RPC
 
 # Set this to your Farcaster FID
-HUB_OPERATOR_FID=$MY-FID
+HUB_OPERATOR_FID=$MY_FID
 
 FC_NETWORK_ID=1
 BOOTSTRAP_NODE=/dns/nemes.farcaster.xyz/tcp/2282
