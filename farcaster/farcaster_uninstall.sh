@@ -4,7 +4,7 @@ if [ -d $HOME/farcaster ] ; then
  cd /root/farcaster/apps/hubble/
  echo "Stopping and remove containers..." && docker compose down -v
  cd ~
- echo "Deleting farcaster dir..." && rm -rf farcaster/ && echo "Farcaster uninastalled!"
+ echo "Deleting farcaster dir..." && rm -rf farcaster/ && echo "Farcaster uninstalled!"
 
 else
 
