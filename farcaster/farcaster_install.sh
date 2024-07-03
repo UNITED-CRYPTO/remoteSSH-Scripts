@@ -19,7 +19,7 @@ else
  sudo chmod -R 777 .hub .rocks
 
  # Зададим права доступа для контейнера Grafana к директории /root/farcaster/apps/hubble/grafana/data
- #sudo mkdir -p grafana/data
+ sudo mkdir ./grafana/data
  sudo chown -R 472:472 ./grafana/data
 
  # Генерируем пару ключей идентификации с помощью Docker Compose
@@ -49,7 +49,7 @@ STATSD_METRICS_SERVER=statsd:8125
 EOF
 
  # Запуск контейнера с нодой и мониторингом
- docker compose up hubble -d
+ docker compose up hubble statsd grafana -d
  # Если видим Hubble requires at least 16GB of RAM to run. Detected 7GB, то сервер имеет недостаточно памяти
 
  # Журналы
