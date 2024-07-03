@@ -1,15 +1,13 @@
 if [ -d $HOME/farcaster ] ; then
 
- echo "There is already farcaster. No need inastall."
+ echo "There is already farcaster. Trying uninastall..."
  cd /root/farcaster/apps/hubble/
- echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
+ echo "Stopping and remove containers..." && docker compose down -v
+ cd ~
+ echo "Deleting farcaster dir..." && rm -rf farcaster/ && echo "Farcaster uninastalled!"
 
 else
 
- echo "There is no farcaster. Trying install..."
+ echo "There is no farcaster, nothong to do"
 
-sudo tee test_file > /dev/null <<EOF
-test
-EOF
- 
 fi
