@@ -18,6 +18,9 @@ else
  sudo chown -R $USER:$USER .hub .rocks
  sudo chmod -R 777 .hub .rocks
 
+ # Зададим права доступа для контейнера Grafana к директории /root/farcaster/apps/hubble/grafana/data
+ sudo chown -R 472:472 ./grafana/data
+
  # Генерируем пару ключей идентификации с помощью Docker Compose
  docker compose run hubble yarn identity create
 
@@ -40,10 +43,12 @@ HUB_OPERATOR_FID=$MY_FID
 FC_NETWORK_ID=1
 BOOTSTRAP_NODE=/dns/nemes.farcaster.xyz/tcp/2282
 
+STATSD_METRICS_SERVER=statsd:8125
+
 EOF
 
- # Запуск контейнера с нодой
- docker compose up hubble -d
+ # Запуск контейнера с нодой и мониторингом
+ docker compose up -d
  # Если видим Hubble requires at least 16GB of RAM to run. Detected 7GB, то сервер имеет недостаточно памяти
 
  # Журналы
