@@ -1,6 +1,6 @@
 if [ -d $HOME/farcaster ] ; then
 
- echo "There is already farcaster. Trying uninastall..."
+ echo "There is farcaster. Trying uninastall..."
  cd /root/farcaster/apps/hubble/
  echo "Stopping and remove containers..." && docker compose down -v
  cd ~
