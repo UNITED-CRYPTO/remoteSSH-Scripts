@@ -1,12 +1,12 @@
 if [ -d $HOME/farcaster ] ; then
 
- echo "There is already farcaster. No need inastall."
+ echo "There is already farcaster. No need to install."
  cd /root/farcaster/apps/hubble/
  echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
 
 else
 
- echo "There is no farcaster. Trying install..."
+ echo "There is no farcaster. Trying to install..."
 
  # Клонируем репо farcaster
  git clone --recurse-submodules  https://github.com/farcasterxyz/hub-monorepo.git farcaster
