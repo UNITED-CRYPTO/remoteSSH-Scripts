@@ -7,8 +7,8 @@ else
 
  echo "There is no farcaster. Trying install..."
 
- sudo tee test_file > /dev/null <<EOF
- test
- EOF
+sudo tee test_file > /dev/null <<EOF
+test
+EOF
  
 fi
