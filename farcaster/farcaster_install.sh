@@ -1,7 +1,8 @@
 if [ -d $HOME/farcaster ] ; then
 
  echo "There is already farcaster. No need inastall."
- echo "check last 20 sec. logs" && timeout 20s docker compose logs -f hubble || true
+ cd /root/farcaster/apps/hubble/
+ echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
 
 else
 
@@ -26,26 +27,26 @@ else
  #{"level":30,"time":1719918738294,"pid":28,"hostname":"[some_hostname]","msg":"Wrote peerId: [some ID] to /home/node/app/apps/hubble/.hub/default_id.protobuf"}
 
  # Создание файла .env скриптом
- sudo tee .env > /dev/null <<EOF
- # Set this to your L1 Mainnet ETH RPC URL
- ETH_MAINNET_RPC_URL=$ETH_RPC
+sudo tee .env > /dev/null <<EOF
+# Set this to your L1 Mainnet ETH RPC URL
+ETH_MAINNET_RPC_URL=$ETH_RPC
 
- # Set this to your L2 Optimism Mainnet RPC URL
- OPTIMISM_L2_RPC_URL=$OPTIMISM_RPC
+# Set this to your L2 Optimism Mainnet RPC URL
+OPTIMISM_L2_RPC_URL=$OPTIMISM_RPC
 
- # Set this to your Farcaster FID
- HUB_OPERATOR_FID=$MY_FID
+# Set this to your Farcaster FID
+HUB_OPERATOR_FID=$MY_FID
 
- FC_NETWORK_ID=1
- BOOTSTRAP_NODE=/dns/nemes.farcaster.xyz/tcp/2282
+FC_NETWORK_ID=1
+BOOTSTRAP_NODE=/dns/nemes.farcaster.xyz/tcp/2282
 
- EOF
+EOF
 
  # Запуск контейнера с нодой
  docker compose up hubble -d
  # Если видим Hubble requires at least 16GB of RAM to run. Detected 7GB, то сервер имеет недостаточно памяти
 
  # Журналы
- echo "check last 20 sec. logs" && timeout 20s docker compose logs -f hubble || true
+ echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
 
 fi
