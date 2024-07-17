@@ -1,8 +1,8 @@
 if [ -d $HOME/farcaster ] ; then
 
  echo "There is already farcaster. No need to install."
- cd /root/farcaster/apps/hubble/
- echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
+ #cd /root/farcaster/apps/hubble/
+ #echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
 
 else
 
