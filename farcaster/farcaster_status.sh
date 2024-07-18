@@ -33,15 +33,15 @@ if [ -d $HOME/farcaster ] ; then
 
  if $all_running; then
   # Действия, если контейнеры запущены
-  echo "Все контейнеры ноды запущены!"
+  echo "All node's containers are running!"
   echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
  else
-  echo "Проблема, не все контейнеры запущены"
+  echo "ERROR! Not all node's containers are running!"
   # Действия, если не все контейнеры запущены
  fi
 
 else
 
- echo "There is no farcaster, nothong to do"
+ echo "ERROR! There is no farcaster, nothong to do"
 
 fi
