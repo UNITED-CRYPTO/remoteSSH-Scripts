@@ -72,7 +72,7 @@ EOF
 
   if $all_running; then
    # Действия, если контейнеры запущены
-   echo "Node successfully started!"
+   echo "Node successfully started with new config!"
    echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
   else
    # Действия, если не все контейнеры запущены
