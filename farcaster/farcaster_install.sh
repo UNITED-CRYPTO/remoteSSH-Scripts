@@ -49,10 +49,46 @@ STATSD_METRICS_SERVER=statsd:8125
 EOF
 
  # Запуск контейнера с нодой и мониторингом
+ echo "Starting the node..."
  docker compose up hubble statsd grafana -d
+ sleep 10
  # Если видим Hubble requires at least 16GB of RAM to run. Detected 7GB, то сервер имеет недостаточно памяти
 
- # Журналы
- echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
+ # Проверяем статус ноды *******************************************
+ echo "Checking the node's status..."
+ # Объявляем функцию проверки состояния контейнеров
+ check_container() {
+   local container_name=$1
+   local status=$(docker inspect -f '{{.State.Status}}' "$container_name" 2>/dev/null)
 
+   if [ "$status" == "running" ]; then
+    return 0
+   else
+    return 1
+   fi
+ }
+
+ # Создаем список контейнеров для проверки
+ containers=("hubble-grafana-1" "hubble-hubble-1" "hubble-statsd-1")
+
+ all_running=true
+
+ # Цикл проверки контейнеров
+  for container in "${containers[@]}"; do
+   if ! check_container "$container"; then
+    all_running=false
+    break
+   fi
+  done
+
+  if $all_running; then
+   # Действия, если контейнеры запущены
+   echo "Node successfully started!"
+   echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
+  else
+   # Действия, если не все контейнеры запущены
+   echo "ERROR! Not all node's containers are running!"   
+  fi
+ # ******************************************* 
+ 
 fi
