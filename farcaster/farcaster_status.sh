@@ -34,6 +34,7 @@ if [ -d $HOME/farcaster ] ; then
  if $all_running; then
   # Действия, если контейнеры запущены
   echo "All node's containers are running!"
+  docker compose ps
   echo "check last 60 sec. logs" && timeout 60s docker compose logs -f --tail 100 hubble || true
  else
   echo "ERROR! Not all node's containers are running!"
