@@ -83,11 +83,13 @@ EOF
 
   if $all_running; then
    # Действия, если контейнеры запущены
-   echo "Node successfully started!"
+   echo "Node successfully installed and started!"
+   docker compose ps
    echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
   else
    # Действия, если не все контейнеры запущены
-   echo "ERROR! Not all node's containers are running!"   
+   echo "ERROR! Node installed, but not all node's containers are running!"
+   docker compose ps
   fi
  # ******************************************* 
  
