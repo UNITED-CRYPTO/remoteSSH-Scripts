@@ -59,11 +59,12 @@ EOF
 
  # Сборка образа и запуск контейнера
  echo "Building docker image..."
- docker-compose build
+ docker compose build
 
  echo "Staring docker..."
+ docker compose up -d
  
  # Журналы
- echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 hubble || true
+ echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 || true
 
 fi
