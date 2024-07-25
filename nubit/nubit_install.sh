@@ -6,7 +6,7 @@ else
 
  echo "There is no nubit. Trying to install..."
  mkdir nubit-node
-	cd nubit-node
+ cd nubit-node
 
  echo "Creating docker file..."
  sudo tee Dockerfile > /dev/null <<EOF
