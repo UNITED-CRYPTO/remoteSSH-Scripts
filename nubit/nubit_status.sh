@@ -12,7 +12,7 @@ if [ -d $HOME/nubit-node ] ; then
   echo "Node's container is working!"
   docker compose ps
   echo "Node status:"
- 	docker exec -it nubit-node $HOME/nubit-node/bin/nubit das sampling-stats --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+  docker exec -it nubit-node $HOME/nubit-node/bin/nubit das sampling-stats --node.store $HOME/.nubit-light-nubit-alphatestnet-1
   echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 || true
  fi
   
