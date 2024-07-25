@@ -57,12 +57,25 @@ volumes:
 
 EOF
 
+ # Increase send net buffer size
+ echo "Increase send net buffer size..."
+ sudo sysctl -w net.core.rmem_max=2621440
+ sudo sysctl -w net.core.rmem_default=2621440
+ sudo sysctl -w net.core.wmem_max=2621440
+ sudo sysctl -w net.core.wmem_default=2621440
+ sudo sysctl -w net.core.optmem_max=2621440
+ sudo sysctl -p
+ sudo systemctl restart docker
+ sleep 5
+ 
  # Сборка образа и запуск контейнера
  echo "Building docker image..."
  docker compose build
+ sleep 5
 
  echo "Staring docker..."
  docker compose up -d
+ sleep 5
  
  # Журналы
  echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 || true
