@@ -5,6 +5,14 @@ if [ -d $HOME/nubit-node ] ; then
 else
 
  echo "There is no nubit. Trying to install..."
+
+	# Генерация случайного числа в диапазоне от 1 до 600 (10 мин)
+	random_sleep=$(shuf -i 1-600 -n 1)
+
+	# Задержка на случайное количество секунд
+	echo "Спим $random_sleep секунд..."
+	sleep $random_sleep
+ 
  mkdir nubit-node
  cd nubit-node
 
