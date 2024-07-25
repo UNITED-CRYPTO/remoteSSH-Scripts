@@ -11,7 +11,7 @@ if [ -d $HOME/nubit-node ] ; then
  cat $HOME/nubit-node/nubit-data/mnemonic.txt
  
  echo "Printing BALANCE..."
- docker exec -it nubit-node $HOME/nubit-node/bin/nubit state account-address  --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+ docker exec -it nubit-node $HOME/nubit-node/bin/nubit state balance --node.store $HOME/.nubit-light-nubit-alphatestnet-1
 
 else
 
