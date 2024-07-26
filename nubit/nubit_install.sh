@@ -7,7 +7,7 @@ else
  echo "There is no nubit. Trying to install..."
 
  # Генерация случайного числа в диапазоне от 1 до 60 (1 мин)
- random_sleep=$(shuf -i 1-3600 -n 1)
+ random_sleep=$(shuf -i 1-60 -n 1)
 
  # Задержка на случайное количество секунд
  echo "Спим $random_sleep секунд..."
