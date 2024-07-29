@@ -9,6 +9,7 @@ if [ -d $HOME/nubit-node ] ; then
 
  if [ -e $HOME/nubit-node/nubit-data/mnemonic.txt ]; then
   echo "MNEMONIC: $(cat $HOME/nubit-node/nubit-data/mnemonic.txt)"
+  echo "INSTANCE ID: $(docker compose logs | grep "/ip6/::1/tcp/2121/p2p/")"
 	fi
  
  echo "Printing BALANCE..."
