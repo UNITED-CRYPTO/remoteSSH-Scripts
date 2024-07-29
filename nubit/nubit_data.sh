@@ -9,8 +9,8 @@ if [ -d $HOME/nubit-node ] ; then
 
  if [ -e $HOME/nubit-node/nubit-data/mnemonic.txt ]; then
   echo "MNEMONIC: $(cat $HOME/nubit-node/nubit-data/mnemonic.txt)"
-  echo "INSTANCE ID: $(docker compose logs | grep "/ip6/::1/tcp/2121/p2p/")"
-	fi
+  echo "INSTANCE ID: $(docker compose logs | grep "/udp/2121/quic-v1/webtransport/certhash/")"
+ fi
  
  echo "Printing BALANCE..."
  docker exec -it nubit-node $HOME/nubit-node/bin/nubit state balance --node.store $HOME/.nubit-light-nubit-alphatestnet-1
