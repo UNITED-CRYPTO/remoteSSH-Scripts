@@ -20,10 +20,15 @@ if [ -d $HOME/nubit-node ] ; then
 
   # Задержка на случайное количество секунд
   echo "Спим $random_sleep секунд..."
-  sleep $random_sleep
+#  sleep $random_sleep
 	
   # Переводим токены
-  docker exec -it nubit-node $HOME/nubit-node/bin/nubit state transfer nubit1s06kkp5fr8n2yguk62rql4mva228tmln5j67qg 1 500 100000  --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+#  docker exec -it nubit-node $HOME/nubit-node/bin/nubit state transfer $ADDRESS $random_amount 500 100000  --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+
+  echo $ADDRESS
+  echo "$ADDRESS"
+  docker exec -it nubit-node $HOME/nubit-node/bin/nubit state account-address  --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+  echo "random_amount: $random_amount"
 
  fi
   
