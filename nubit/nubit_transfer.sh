@@ -11,9 +11,20 @@ if [ -d $HOME/nubit-node ] ; then
  else
   echo "Node's container is working!"
   docker compose ps
-  echo "Node status:"
-  docker exec -it nubit-node $HOME/nubit-node/bin/nubit das sampling-stats --node.store $HOME/.nubit-light-nubit-alphatestnet-1
-  echo "check last 20 sec. logs" && timeout 20s docker compose logs -f --tail 100 || true
+
+  # Генерация случайного числа задержки в диапазоне от 1 до 600
+  random_sleep=$(shuf -i 1-600 -n 1)
+	
+  # Генерация случайного числа количества в диапазоне от 1 до 100
+  random_amount=$(shuf -i 1-100 -n 1)
+
+  # Задержка на случайное количество секунд
+  echo "Спим $random_sleep секунд..."
+  sleep $random_sleep
+	
+  # Переводим токены
+  docker exec -it nubit-node $HOME/nubit-node/bin/nubit state transfer nubit1s06kkp5fr8n2yguk62rql4mva228tmln5j67qg 1 500 100000  --node.store $HOME/.nubit-light-nubit-alphatestnet-1
+
  fi
   
 else
