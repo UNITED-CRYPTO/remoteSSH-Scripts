@@ -12,8 +12,8 @@ if [ -d $HOME/nubit-node ] ; then
   echo "Node's container is working!"
   docker compose ps
 
-  # Генерация случайного числа задержки в диапазоне от 1 до 6
-  random_sleep=$(shuf -i 1-6 -n 1)
+  # Генерация случайного числа задержки в диапазоне от 1 до 600
+  random_sleep=$(shuf -i 1-600 -n 1)
 	
   # Генерация случайного числа количества в диапазоне от 1 до 100
   random_amount=$(shuf -i 1-100 -n 1)
