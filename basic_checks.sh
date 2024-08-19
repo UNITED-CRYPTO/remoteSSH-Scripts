@@ -18,3 +18,14 @@ uptime
 
 echo "RAM check"
 free -h
+
+if command -v speedtest &> /dev/null
+then
+    echo "speedtest-cli уже установлен. Запускаю тест скорости..."
+    speedtest
+else
+    echo "speedtest-cli не найден. Устанавливаю..."
+    sudo apt update
+    sudo apt install -y speedtest-cli
+    speedtest
+fi
