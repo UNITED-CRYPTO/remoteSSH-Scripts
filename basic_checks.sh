@@ -19,6 +19,10 @@ uptime
 echo "RAM check"
 free -h
 
+random_sleep=$(shuf -i 1-600 -n 1)
+echo "Спим $random_sleep секунд..."
+sleep $random_sleep
+
 if command -v speedtest &> /dev/null
 then
     echo "speedtest-cli уже установлен. Запускаю тест скорости..."
