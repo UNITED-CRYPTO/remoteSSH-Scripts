@@ -19,17 +19,17 @@ uptime
 echo "RAM check"
 free -h
 
-random_sleep=$(shuf -i 1-600 -n 1)
-echo "Спим $random_sleep секунд..."
-sleep $random_sleep
+#random_sleep=$(shuf -i 1-600 -n 1)
+#echo "Спим $random_sleep секунд..."
+#sleep $random_sleep
 
-if command -v speedtest &> /dev/null
-then
-    echo "speedtest-cli уже установлен. Запускаю тест скорости..."
-    speedtest
-else
-    echo "speedtest-cli не найден. Устанавливаю..."
-    sudo apt update
-    sudo apt install -y speedtest-cli
-    speedtest
-fi
+#if command -v speedtest &> /dev/null
+#then
+#    echo "speedtest-cli уже установлен. Запускаю тест скорости..."
+#    speedtest
+#else
+#    echo "speedtest-cli не найден. Устанавливаю..."
+#    sudo apt update
+#    sudo apt install -y speedtest-cli
+#    speedtest
+#fi
