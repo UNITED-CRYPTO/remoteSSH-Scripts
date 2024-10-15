@@ -84,6 +84,7 @@ else
     echo "Ошибка: Сессия $SESSION_NAME не активна."
 fi
 
+screen -wipe
 screen -ls
 
 echo "Comlete!"
