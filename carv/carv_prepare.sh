@@ -11,10 +11,10 @@
 #fi
 
 echo "git check"
-git version
+#git version
 
 echo "make version check"
-make -v
+#make -v
 
 echo "screen version check"
-screen -v
+#screen -v
