@@ -67,7 +67,7 @@ if check_session; then
     # Шаг 3: Проверяем, мертва ли сессия
     if is_session_dead; then
         echo "Сессия $SESSION_NAME имеет статус Dead, удаляю..."
-        screen -S $SESSION_NAME -X quit
+        screen -wipe
         echo "Создаю новую сессию $SESSION_NAME..."
         screen -dmS $SESSION_NAME
     else
@@ -82,11 +82,14 @@ fi
 # Шаг 4: Проверка, что сессия живая
 if check_session && ! is_session_dead; then
     echo "Сессия $SESSION_NAME успешно создана и активна."
+    echo "Запускаем ноду"
+    screen -S carv -X stuff "/root/verifier/bin/verifier -private-key $PRIVATE_KEY -reward-address $REVARD_ADDRESS -commission-rate 1 > /root/verifier/log.txt 2>&1\n"
+    echo "Попытка запустить ноду сделана, спим 60 сек..."
+    sleep 60
+    echo "Выводим лог ноды"
+    tail -n100 /root/verifier/log.txt
 else
     echo "Ошибка: Сессия $SESSION_NAME не активна."
 fi
-
-screen -wipe
-screen -ls
 
 echo "Comlete!"
