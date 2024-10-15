@@ -1,4 +1,4 @@
-sudo apt update && sudo apt upgrade -y
+#sudo apt update && sudo apt upgrade -y
 
 if command -v make &> /dev/null
 then
@@ -26,6 +26,7 @@ fi
 echo "screen version check"
 screen -v
 
+echo "go version check"
+go version
+
 echo "Comlete!"
-
-
