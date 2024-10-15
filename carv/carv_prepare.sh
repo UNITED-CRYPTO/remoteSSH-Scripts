@@ -1,14 +1,14 @@
-sudo apt update && sudo apt upgrade -y
+#sudo apt update && sudo apt upgrade -y
 
-if command -v make &> /dev/null
-then
-    echo "make уже установлен"
-    make -v
-else
-    echo "make не найден. Устанавливаю..."
-    sudo apt install make -y
-    make -v
-fi
+#if command -v make &> /dev/null
+#then
+#    echo "make уже установлен"
+#    make -v
+#else
+#    echo "make не найден. Устанавливаю..."
+#    sudo apt install make -y
+#    make -v
+#fi
 
 echo "git check"
 git version
