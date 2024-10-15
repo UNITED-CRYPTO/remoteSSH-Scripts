@@ -45,8 +45,9 @@ go version
 
 cd verifier/bin/
 
-screen -dmS carv
-screen -S carv -X stuff 'echo "Hello from inside screen!"\n'
+#screen -dmS carv
+#screen -S carv -X stuff 'echo "Hello from inside screen!"\n'
 
+screen -ls
 
 echo "Comlete!"
