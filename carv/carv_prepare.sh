@@ -17,4 +17,4 @@ echo "make version check"
 #make -v
 
 echo "screen version check"
-#screen -v
+screen -v
