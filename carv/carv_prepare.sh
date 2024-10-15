@@ -39,8 +39,14 @@ screen -v
 echo "go version check"
 go version
 
-git clone https://github.com/carv-protocol/verifier.git
-cd verifier
-make build
+#git clone https://github.com/carv-protocol/verifier.git
+#cd verifier
+#make build
+
+cd verifier/bin/
+
+screen -dmS carv
+screen -S carv -X stuff 'echo "Hello from inside screen!"\n'
+
 
 echo "Comlete!"
