@@ -82,12 +82,12 @@ fi
 # Шаг 4: Проверка, что сессия живая
 if check_session && ! is_session_dead; then
     echo "Сессия $SESSION_NAME успешно создана и активна."
-    echo "Запускаем ноду"
-    screen -S carv -X stuff "/root/verifier/bin/verifier -private-key $PRIVATE_KEY -reward-address $REVARD_ADDRESS -commission-rate 1 > /root/verifier/log.txt 2>&1\n"
+    #echo "Запускаем ноду"
+    #screen -S carv -X stuff "/root/verifier/bin/verifier -private-key $PRIVATE_KEY -reward-address $REVARD_ADDRESS -commission-rate 1 > /root/verifier/log.txt 2>&1\n"
     #echo "PRIVATE_KEY=$PRIVATE_KEY"
     #echo "REVARD_ADDRESS=$REVARD_ADDRESS"
-    echo "Попытка запустить ноду сделана, спим 60 сек..."
-    sleep 60
+    #echo "Попытка запустить ноду сделана, спим 60 сек..."
+    #sleep 60
     echo "Выводим лог ноды"
     tail -n100 /root/verifier/log.txt
 else
