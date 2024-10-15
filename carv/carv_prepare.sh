@@ -45,9 +45,43 @@ go version
 
 cd verifier/bin/
 
-#screen -dmS carv
-#screen -S carv -X stuff 'echo "Hello from inside screen!"\n'
+# Название сессии
+SESSION_NAME="carv"
 
-screen -ls
+# Функция для проверки, существует ли живая сессия
+check_session() {
+    screen -ls | grep -q "$SESSION_NAME"
+}
+
+# Функция для проверки, что сессия "Dead ???"
+is_session_dead() {
+    screen -ls | grep "$SESSION_NAME" | grep -q "Dead"
+}
+
+# Шаг 1: Проверка наличия сессии
+if check_session; then
+    echo "Сессия $SESSION_NAME найдена."
+    
+    # Шаг 3: Проверяем, мертва ли сессия
+    if is_session_dead; then
+        echo "Сессия $SESSION_NAME имеет статус Dead, удаляю..."
+        screen -S $SESSION_NAME -X quit
+        echo "Создаю новую сессию $SESSION_NAME..."
+        screen -dmS $SESSION_NAME
+    else
+        echo "Сессия $SESSION_NAME активна."
+    fi
+else
+    # Шаг 2: Если сессии нет, создаем новую
+    echo "Сессия $SESSION_NAME не найдена, создаю новую..."
+    screen -dmS $SESSION_NAME
+fi
+
+# Шаг 4: Проверка, что сессия живая
+if check_session && ! is_session_dead; then
+    echo "Сессия $SESSION_NAME успешно создана и активна."
+else
+    echo "Ошибка: Сессия $SESSION_NAME не активна."
+fi
 
 echo "Comlete!"
