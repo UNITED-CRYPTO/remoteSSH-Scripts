@@ -10,10 +10,10 @@
 #    make -v
 #fi
 
-echo "git check"
+#echo "git check"
 #git version
 
-echo "make version check"
+#echo "make version check"
 #make -v
 
 echo "screen version check" && screen -v
