@@ -13,6 +13,9 @@ make -v
 echo "screen version check"
 screen -v
 
+echo "GLIBC version check"
+ldd --version
+
 echo "port check"
 sudo ss -tulpn | grep LISTEN
 
