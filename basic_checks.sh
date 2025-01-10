@@ -37,7 +37,7 @@ free -h
 	#sudo apt-get autoremove -y
   
 # Удаление старых журналов
-	#sudo journalctl --vacuum-time=2d (удалит журналы старше 2 дней)
+	#sudo journalctl --vacuum-time=2d
 	
 # Очистка временных файлов
 	#sudo rm -rf /tmp/*
