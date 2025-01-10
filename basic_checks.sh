@@ -35,13 +35,13 @@ free -h
 	sudo apt-get autoremove
   
 # Удаление старых журналов
-	sudo journalctl --vacuum-time=2d (удалит журналы старше 2 дней)
+	#sudo journalctl --vacuum-time=2d (удалит журналы старше 2 дней)
 	
 # Очистка временных файлов
-	sudo rm -rf /tmp/*
+	#sudo rm -rf /tmp/*
 
 # Удаление неиспользуемых Docker-объектов
-	docker system prune -a
+	#docker system prune -a
 
 #random_sleep=$(shuf -i 1-600 -n 1)
 #echo "Спим $random_sleep секунд..."
