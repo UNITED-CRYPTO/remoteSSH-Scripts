@@ -20,7 +20,7 @@ echo "port check"
 sudo ss -tulpn | grep LISTEN
 
 echo "disk check"
-df -hT | grep sda3 | awk '{print $1 echo '-' $5 echo " G Available on Disk"}'
+df -hT | grep sda3 | awk '{print $5 echo " Available on Disk"}'
 
 echo "CPU load check"
 uptime 
