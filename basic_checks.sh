@@ -32,18 +32,18 @@ free -h
 
 ## Обслуживание
 # Очистка кеша пакетов APT
-	#sudo apt-get clean
-	#sudo apt-get autoclean
-	#sudo apt-get autoremove -y
+	sudo apt-get clean
+	sudo apt-get autoclean
+	sudo apt-get autoremove -y
   
 # Удаление старых журналов
-	#sudo journalctl --vacuum-time=2d
+	sudo journalctl --vacuum-time=2d
 	
 # Очистка временных файлов
-	#sudo rm -rf /tmp/*
+	sudo rm -rf /tmp/*
 
 # Удаление неиспользуемых Docker-объектов
-	#docker system prune -a -f
+	docker system prune -a -f
 
 #random_sleep=$(shuf -i 1-600 -n 1)
 #echo "Спим $random_sleep секунд..."
