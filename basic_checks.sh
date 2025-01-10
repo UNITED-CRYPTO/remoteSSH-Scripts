@@ -30,9 +30,9 @@ free -h
 
 ## Обслуживание
 # Очистка кеша пакетов APT
-	sudo apt-get clean
-	sudo apt-get autoclean
-	sudo apt-get autoremove
+	#sudo apt-get clean
+	#sudo apt-get autoclean
+	#sudo apt-get autoremove
   
 # Удаление старых журналов
 	#sudo journalctl --vacuum-time=2d (удалит журналы старше 2 дней)
