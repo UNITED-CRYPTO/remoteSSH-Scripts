@@ -43,7 +43,7 @@ free -h
 	#sudo rm -rf /tmp/*
 
 # Удаление неиспользуемых Docker-объектов
-	#docker system prune -a
+	#docker system prune -a -f
 
 #random_sleep=$(shuf -i 1-600 -n 1)
 #echo "Спим $random_sleep секунд..."
