@@ -21,6 +21,8 @@ sudo ss -tulpn | grep LISTEN
 
 echo "disk check"
 df -hT | grep sda3 | awk '{print $5 echo " Available on Disk"}'
+disk_usage=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+echo "Disk_used_percentage $disk_usage"
 
 echo "CPU load check"
 uptime 
