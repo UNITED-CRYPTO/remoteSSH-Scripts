@@ -12,7 +12,7 @@ if systemctl list-unit-files | grep -q "^$SERVICE"; then
         echo "Service $SERVICE is Active. Installation isn't needed."
 		sleep 2
 		echo "Looking for 60s logs.."
-		timeout 60s journalctl -u carv.service -b -f
+		timeout 60s journalctl -u carv.service -b -f || true
         exit 0
     else
         echo "Service $SERVICE exist, but isn't Active. Trying to start.."
@@ -23,7 +23,7 @@ if systemctl list-unit-files | grep -q "^$SERVICE"; then
 		        sleep 2
     	        echo ""
                 echo "Looking for 60s logs.."
-                timeout 60s journalctl -u carv.service -b -f
+                timeout 60s journalctl -u carv.service -b -f || true
             else
                 echo "Warning: $SERVICE failed to start."
             fi
@@ -75,7 +75,7 @@ EOF
 		sleep 2
     	echo ""
         echo "Looking for 60s logs.."
-        timeout 60s journalctl -u carv.service -b -f
+        timeout 60s journalctl -u carv.service -b -f || true
     else
         echo "Warning: $SERVICE failed to start."
     fi
